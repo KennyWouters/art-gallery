@@ -1,5 +1,1 @@
-{
-  "framework": "adonis",
-  "buildCommand": "adonis build",
-  "outputDirectory": "public"
-}
+
