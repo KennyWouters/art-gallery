@@ -1,0 +1,16 @@
+<!-- File: resources/views/signup.edge -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup</title>
+</head>
+<body>
+  <form method="POST" action="/signup">
+    {{{ csrfField() }}}
+    <input type="text" name="username" placeholder="Username" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <button type="submit">Signup</button>
+  </form>
+</body>
+</html>
