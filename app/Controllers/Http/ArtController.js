@@ -29,6 +29,13 @@ class ArtController {
     return response.json(arts)
   }
 
+  // Retrieve info by Type
+  async showByType({ params, response }) {
+    const arts = await Art.query().where('type', params.type).fetch()
+    return response.json(arts)
+  }
+
+
   async store({ request, response }) {
     const artData = request.only(['name', 'description', 'price'])
     const art = await Art.create(artData)

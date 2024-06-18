@@ -18,6 +18,9 @@ GET http://127.0.0.1:3333/arts/year/2008
 
 GET http://127.0.0.1:3333/arts/category/landscapes
 
+###
+
+GET http://127.0.0.1:3333/arts/type/pastel
 
 
 
