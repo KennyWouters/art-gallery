@@ -1,5 +1,4 @@
-
-POST http://localhost:3333/signup
+POST http://127.0.0.1:3333/signup
 Content-Type: application/json
 
 {
@@ -7,7 +6,14 @@ Content-Type: application/json
     "email": "newuser@example.com",
     "password": "password123"
 }
+###
 
-GET http://localhost:3333/users
+GET http://127.0.0.1:3333/users
+
+###
+
+GET http://127.0.0.1:3333/arts/year/2008
+
+
 
 

@@ -4,3 +4,4 @@
 const Route = use('Route')
 
 Route.resource('arts', 'ArtController')
+Route.get('arts/year/:year', 'ArtController.showByYear')

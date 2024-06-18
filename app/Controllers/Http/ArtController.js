@@ -4,14 +4,23 @@
 const Art = use('App/Models/Art')
 
 class ArtController {
+
+  // Retrieve all info
   async index({ response }) {
     const arts = await Art.all()
     return response.json(arts)
   }
 
+  // Retrieve info by id
   async show({ params, response }) {
     const art = await Art.find(params.id)
     return response.json(art)
+  }
+
+  // Retrieve info by Year
+  async showByYear({ params, response }) {
+    const arts = await Art.query().where('year', params.year).fetch()
+    return response.json(arts)
   }
 
   async store({ request, response }) {
