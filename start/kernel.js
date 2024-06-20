@@ -3,6 +3,7 @@
 /** @type {import('@adonisjs/framework/src/Server')} */
 const Server = use('Server')
 
+
 /*
 |--------------------------------------------------------------------------
 | Global Middleware
@@ -39,7 +40,10 @@ const globalMiddleware = [
 */
 const namedMiddleware = {
   auth: 'Adonis/Middleware/Auth',
-  guest: 'Adonis/Middleware/AllowGuestOnly'
+  guest: 'Adonis/Middleware/AllowGuestOnly',
+  admin: 'App/Middleware/Admin',
+  isAdmin: 'App/Middleware/IsAdmin'
+
 }
 
 /*
