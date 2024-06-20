@@ -29,7 +29,7 @@ class SignupController {
       secure: false, // true for 465, false for other ports
       auth: {
         user: 'kenny.wouters2@gmail.com', // replace with your SMTP username
-        pass: 'KanarGmail.com69?'  // replace with your SMTP password
+        pass: ''  // replace with your SMTP password
       }
     });
 
