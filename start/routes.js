@@ -19,5 +19,6 @@ Route.group(() => {
   Route.post('login', 'AuthController.login')
   Route.get('/logout', 'AuthController.logout')
   Route.get('/admin', 'AdminController.showDashboard').middleware(['auth'])
+  Route.get('/verify', 'VerificationController.verify')
 })
 

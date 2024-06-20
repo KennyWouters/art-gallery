@@ -21,7 +21,7 @@ class SignupController {
     await Mail.send('emails.verify',  {token: token, username: user.username}, (message) => {
       message
         .to(user.email)
-        .from('<from-email>')
+        .from('kenny.wouters2@gmail.com')
         .subject('Please confirm your email address')
     })
     return response.created(user)
