@@ -11,7 +11,7 @@
     <li><a href="/arts">View All Arts</a></li>
     <br>
     <li><a href="/signup">Signup</a></li>
-    <li> <a href="/users">Users</a> </li>
+
     <br>
     <li> <a href="/arts/year/2007">View Arts from 2007</a> </li>
     <li> <a href="/arts/year/2008">View Arts from 2008</a> </li>
@@ -35,7 +35,11 @@
 
     <br>
 
-    <li><a href="/login">Login</a></li>
+    @if(auth.user)
+          <li>Welcome, {{ auth.user.username }}! <a href="/logout">Logout</a></li>
+        @else
+          <li><a href="/login">Login</a></li>
+        @endif
 
     <br>
 

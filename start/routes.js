@@ -18,6 +18,6 @@ Route.group(() => {
   Route.get('login', 'AuthController.showLoginForm').as('login')
   Route.post('login', 'AuthController.login')
   Route.get('/logout', 'AuthController.logout')
-  Route.get('/admin', 'AdminController.dashboard').middleware(['auth', 'Admin'])
+  Route.get('/admin', 'AdminController.showDashboard').middleware(['auth'])
 })
 
