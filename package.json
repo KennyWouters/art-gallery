@@ -28,7 +28,8 @@
     "@adonisjs/session": "^1.0.27",
     "@adonisjs/shield": "^1.0.8",
     "axios": "^1.7.2",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.9.14"
   },
   "autoload": {
     "App": "./app"

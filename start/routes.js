@@ -22,3 +22,13 @@ Route.group(() => {
   Route.get('/verify', 'VerificationController.verify')
 })
 
+
+
+Route.group(() => {
+  Route.get('/users', 'AdminUserController.index')
+  Route.get('/users/create', 'AdminUserController.create')
+  Route.post('/users', 'AdminUserController.store')
+  Route.get('/users/:id/edit', 'AdminUserController.edit')
+  Route.put('/users/:id', 'AdminUserController.update')
+  Route.post('/users/:id', 'AdminUserController.destroy')
+}).prefix('admin')

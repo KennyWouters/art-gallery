@@ -1,23 +1,16 @@
 <!-- File: resources/views/admin/dashboard.edge -->
 <!DOCTYPE html>
-<html>
+<html lang="">
 <head>
   <title>Admin Dashboard</title>
 </head>
 <body>
   <h1>Admin Dashboard</h1>
-  <ul>
-    @each(user in users)
-      <li>
-        {{ user.username }} - {{ user.email }}
-        <a href="/admin/users/{{ user.id }}/edit">Edit</a>
-        <form action="/admin/users/{{ user.id }}" method="POST">
-          <input type="hidden" name="_method" value="DELETE">
-          {{ csrfField() }}
-          <button type="submit">Delete</button>
-        </form>
-      </li>
-    @endeach
-  </ul>
+  <nav>
+    <ul>
+      <li><a href="{{ route('AdminUserController.index') }}">Manage Users</a></li>
+      <!-- Add more links for other administrative tasks here -->
+    </ul>
+  </nav>
 </body>
 </html>

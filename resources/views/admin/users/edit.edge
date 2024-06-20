@@ -1,0 +1,21 @@
+<!-- File: resources/views/admin/users/edit.edge -->
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <title>Admin Dashboard - Edit User</title>
+</head>
+<body>
+  <h1>Edit User</h1>
+  <form action="/admin/users/{{ user.id }}" method="POST">
+    <input type="hidden" name="_method" value="PUT">
+    {{ csrfField() }}
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" value="{{ user.username }}" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" value="{{ user.email }}" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <button type="submit">Update</button>
+  </form>
+</body>
+</html>

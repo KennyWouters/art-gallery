@@ -1,0 +1,24 @@
+<!-- File: resources/views/admin/users/index.edge -->
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <title>Admin Dashboard - Users</title>
+</head>
+<body>
+  <h1>Users</h1>
+  <a href="/admin/users/create">Create New User</a>
+  <ul>
+    @each(user in users)
+      <li>
+        {{ user.username }} - {{ user.email }}
+        <a href="/admin/users/{{ user.id }}/edit">Edit</a>
+        <form action="{{ route('AdminUserController.destroy', { id: user.id }) }}" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  {{ csrfField() }}
+  <button type="submit">Delete</button>
+</form>
+      </li>
+    @endeach
+  </ul>
+</body>
+</html>
