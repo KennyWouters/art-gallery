@@ -1,8 +1,8 @@
 // File: app/Controllers/Http/SignupController.js
 'use strict'
 
-const Env = use('Env')
-const smtpUsername = ENV.get('SMTP_USERNAME')
+// const Env = use('Env')
+// const smtpUsername = ENV.get('SMTP_USERNAME')
 const User = use('App/Models/User')
 const Token = use('App/Models/Token')
 const Mail = use('Mail')
