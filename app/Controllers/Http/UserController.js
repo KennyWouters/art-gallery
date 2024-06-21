@@ -39,6 +39,7 @@ class UserController {
     if (!user) {
       return response.status(404).json({ message: 'User not found' })
     }
+    await user.tokens().delete()
     await user.delete()
     return response.status(204).json(null)
   }
