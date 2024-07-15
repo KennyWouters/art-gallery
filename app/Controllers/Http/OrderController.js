@@ -6,7 +6,7 @@ class OrderController {
 
   // Retrieve all info
   async index({ response }) {
-    const orders = await Order.query().with('user').fetch()
+    const orders = await Order.all()
     return response.json(orders)
   }
 
